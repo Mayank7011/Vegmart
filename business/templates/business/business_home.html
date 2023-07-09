@@ -1,0 +1,30 @@
+{%extends 'store/base.html' %}
+{% load static %}
+{% block content %}
+<div class="card mb-4 mt-4">
+    <div class="card-header text-white text-center bg-success">
+      Business Portal
+    </div>
+    <div class="card-body">
+        <div class="d-flex justify-content-around flex-wrap mt-2">
+            <div class="card mt-3 custom-card" style="width: 22rem;">
+                <img class="card-img-top"  style="height:250px;" src="{% static 'images/business-shop.jpg' %}" alt="business portal">
+                <div class="card-body text-center">
+                <h5 class="card-title">Build your business with us, Make your store online</h5>
+                <p> Do you want to start your own online store but don't know where to start.<p>
+                <p>Well, don't worry.We are helping our users to start their own online store,<br>So what are you waiting for ? Start your online store with us.</p>
+                <a href="{% url 'business:new-online-shop' %}" class="btn btn-primary">View Full Details</a>
+                </div>
+            </div>
+            <div class="card mt-4 custom-card" style="width: 22rem;">
+                <img class="card-img-top" style="height: 250px;" src="{% static 'images/delivery-boy-image.png' %}" alt="delivery-boy">
+                <div class="card-body text-center">
+                <h5 class="card-title">Opertunity to work as delivery boy</h5>
+                <p>Want to earn some money in your free time then you can get started as our delivery boy and enjoy your salary just by delivering orders in your area.<br>So what are you waiting for ? apply for delivery boy job today.</p>
+                <a href="{% url 'business:new-delivery-boy' %}" class="btn btn-primary">View Full Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
